@@ -1,3 +1,9 @@
 #filter-area{
-    min-width: 10vw;
+    width: 15vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    background-color: gray;
+    padding: 5px;
+    flex-direction: column;
 }

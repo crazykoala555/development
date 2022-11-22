@@ -7,16 +7,17 @@ import {Typography} from "@mui/material";
 function App() {
   return (
     <div className="App">
-        <div id="siteTitle">
-            <Typography variant="h3">Welcome to the Game Zone!</Typography>
-            <Typography variant="h6">Feel free to add games to your cart :)</Typography>
+        <FilterArea/>
+        <div id="nonFilterArea">
+            <div id="siteTitle">
+                <Typography variant="h3">Welcome to the Game Zone!</Typography>
+                <Typography variant="h6">Feel free to add games to your cart :)</Typography>
+            </div>
+            <div id="content">
+                <ItemArea/>
+                {/*<CartArea/>*/}
+            </div>
         </div>
-        <div id="content">
-            <FilterArea/>
-            <ItemArea/>
-            {/*<CartArea/>*/}
-        </div>
-
     </div>
   );
 }
