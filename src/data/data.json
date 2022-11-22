@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Assetto Corsa Competizione",
+    "description": "GT Racing Simulator",
+    "studio" : "Kunos Simulazioni",
+    "genre" : "Racing",
+    "platform" : ["XB", "PS", "PC"],
+    "price": 39.99,
+    "thumbnail": "images/acc.webp"
+  },
+  {
+    "name": "Forza Horizon 5",
+    "description": "Open World Racing Game",
+    "studio" : "Playground Games",
+    "genre" : "Racing",
+    "platform" : ["XB", "PC"],
+    "price": 59.99,
+    "thumbnail": "images/forzahorizon5.jpg"
+  },
+  {
+    "name": "Gran Tourismo 7",
+    "description": "Track Focused Racing Game",
+    "studio" : "Polyphony Digital",
+    "genre" : "Racing",
+    "platform" : ["PS", "PC"],
+    "price": 59.99,
+    "thumbnail": "images/grantourismo7.webp"
+  },
+  {
+    "name": "Valorant",
+    "description": "Competitive Shooter",
+    "studio" : "Riot Games",
+    "genre" : "First-Person Shooter",
+    "platform" : ["PC"],
+    "price": 0.00,
+    "thumbnail": "images/valorant.jpg"
+  },
+  {
+    "name": "Far Cry 6",
+    "description": "Open World Shooter",
+    "studio" : "Ubisoft",
+    "genre" : "First-Person Shooter",
+    "platform" : ["XB", "PC", "PS"],
+    "price": 59.99,
+    "thumbnail": "images/farcry6.webp"
+  },
+  {
+    "name": "Halo Infinite",
+    "description": "Futuristic Shooter",
+    "studio" : "343 Industries",
+    "genre" : "First-Person Shooter",
+    "platform" : ["XB", "PC"],
+    "price": 59.99,
+    "thumbnail": "images/haloinfinite.jpg"
+  }
+]

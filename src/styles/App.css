@@ -1,0 +1,13 @@
+.App {
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*flex-wrap: nowrap;*/
+  /*justify-content: space-between;*/
+}
+#siteTitle{
+    text-align: center;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+}

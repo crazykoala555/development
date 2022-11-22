@@ -1,0 +1,10 @@
+#item-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.itemCard{
+    flex-basis: 25%;
+    padding: 10px;
+}
