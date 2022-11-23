@@ -10,27 +10,12 @@ gameData.forEach((item) => {
 
 function ItemArea (props) {
 
-    useEffect(() => {handleSort2()}, [props.sortSelect])
+    useEffect(() => {handleSort()}, [props.sortSelect])
 
     const [itemList, setItemList] = useState(gameData);
 
-    const handleSort2 = () => {
-        let tempList = itemList;
-        if(props.sortSelect === "Price, Ascending"){
-            tempList.sort(sortAscending);
-            setItemList(tempList);
-        }
-        if(props.sortSelect === "Price, Descending"){
-            tempList.sort(sortDescending);
-            setItemList(tempList);
-        }
-        if(props.sortSelect === "Alphabetical"){
-            tempList.sort(sortAlphabetical);
-            setItemList(tempList);
-        }
-    }
     function handleSort(){
-        let tempList = itemList;
+        let tempList = [...itemList];
         switch (props.sortSelect){
             case "Price, Ascending" :
                 console.log("ascending")
