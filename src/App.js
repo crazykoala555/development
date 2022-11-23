@@ -7,7 +7,7 @@ import {useState} from "react";
 
 function App() {
 
-    const [sortSelect, setSortSelect] = useState("Price, Ascending");
+    const [sortSelect, setSortSelect] = useState("");
 
     return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
                 <Typography variant="h6">Feel free to add games to your cart :)</Typography>
             </div>
             <div id="content">
-                <ItemArea/>
+                <ItemArea sortSelect={sortSelect}/>
                 {/*<CartArea/>*/}
             </div>
         </div>
