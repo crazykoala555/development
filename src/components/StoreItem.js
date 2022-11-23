@@ -1,6 +1,8 @@
 import CardMedia from "@mui/material/CardMedia";
 import {Button, Card, CardActions, CardContent, Typography} from "@mui/material";
 import "../styles/itemarea.css"
+import gameData from "../data/data.json";
+import PlatformItem from "./PlatformItem";
 
 function StoreItem (props) {
     return(
@@ -13,15 +15,34 @@ function StoreItem (props) {
                     alt={props.name}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {props.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <div className="titleContent">
+                        <Typography gutterBottom variant="h5" component="div">
+                            {props.name}
+                        </Typography>
+                        <Typography gutterBottom variant="h5" component="div">
+                            ${props.price}
+                        </Typography>
+                    </div>
+                    <Typography variant="h6" color="text.secondary">
                         {props.description}
                     </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        Genre: {props.genre}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        Available on:
+                    </Typography>
+                    <div className="platformArea">
+                        {props.platform.map((item, index) => (
+                            <PlatformItem
+                                key={item}
+                                platform={item}
+                            />
+                        ))}
+                    </div>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Add to Cart</Button>
+                    <Button size="medium">Add to Cart</Button>
                 </CardActions>
             </Card>
         </div>

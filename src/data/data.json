@@ -1,19 +1,19 @@
 [
   {
-    "name": "Assetto Corsa Competizione",
-    "description": "GT Racing Simulator",
+    "name": "Assetto Corsa",
+    "description": "Ultra Realistic Racing Simulator",
     "studio" : "Kunos Simulazioni",
     "genre" : "Racing",
-    "platform" : ["XB", "PS", "PC"],
-    "price": 39.99,
-    "thumbnail": "images/acc.webp"
+    "platform" : ["Xbox", "PlayStation", "PC"],
+    "price": 3.99,
+    "thumbnail": "images/assettocorsa.jpg"
   },
   {
     "name": "Forza Horizon 5",
     "description": "Open World Racing Game",
     "studio" : "Playground Games",
     "genre" : "Racing",
-    "platform" : ["XB", "PC"],
+    "platform" : ["Xbox", "PC"],
     "price": 59.99,
     "thumbnail": "images/forzahorizon5.jpg"
   },
@@ -22,7 +22,7 @@
     "description": "Track Focused Racing Game",
     "studio" : "Polyphony Digital",
     "genre" : "Racing",
-    "platform" : ["PS", "PC"],
+    "platform" : ["PlayStation", "PC"],
     "price": 59.99,
     "thumbnail": "images/grantourismo7.webp"
   },
@@ -40,7 +40,7 @@
     "description": "Open World Shooter",
     "studio" : "Ubisoft",
     "genre" : "First-Person Shooter",
-    "platform" : ["XB", "PC", "PS"],
+    "platform" : ["Xbox", "PC", "PlayStation"],
     "price": 59.99,
     "thumbnail": "images/farcry6.webp"
   },
@@ -49,7 +49,7 @@
     "description": "Futuristic Shooter",
     "studio" : "343 Industries",
     "genre" : "First-Person Shooter",
-    "platform" : ["XB", "PC"],
+    "platform" : ["Xbox", "PC"],
     "price": 59.99,
     "thumbnail": "images/haloinfinite.jpg"
   },
@@ -58,7 +58,7 @@
     "description": "Open World Survival and Creative Game",
     "studio" : "Mojang",
     "genre" : "Open World",
-    "platform" : ["XB", "PC", "PS", "SW"],
+    "platform" : ["Xbox", "PC", "PlayStation", "Switch"],
     "price": 24.99,
     "thumbnail": "images/minecraft.jpg"
   },
@@ -67,7 +67,7 @@
     "description": "Open World Survival and Creative Game",
     "studio" : "Re-Logic",
     "genre" : "Open World",
-    "platform" : ["XB", "PC", "PS", "SW"],
+    "platform" : ["Xbox", "PC", "PlayStation", "Switch"],
     "price": 24.99,
     "thumbnail": "images/terraria.jpg"
   },
@@ -76,7 +76,7 @@
     "description": "Cutesy Level-Based Adventure Game",
     "studio" : "Sumo Digital",
     "genre" : "Co-Op",
-    "platform" : ["PC", "PS"],
+    "platform" : ["PC", "PlayStation"],
     "price": 59.99,
     "thumbnail": "images/sackboy.jpg"
   },
@@ -94,16 +94,16 @@
     "description": "Collaborative Cooking Game",
     "studio" : "Team17",
     "genre" : "Co-Op",
-    "platform" : ["XB", "PC", "PS", "SW"],
+    "platform" : ["Xbox", "PC", "PlayStation", "Switch"],
     "price": 19.99,
     "thumbnail": "images/overcooked.jpg"
   },
   {
     "name": "Overcooked 2",
-    "description": "Collaborative Cooking Game, with more added fun!",
+    "description": "Collaborative Cooking Game, Version 2!",
     "studio" : "Team17",
     "genre" : "Co-Op",
-    "platform" : ["XB", "PC", "PS", "SW"],
+    "platform" : ["Xbox", "PC", "PlayStation", "Switch"],
     "price": 29.99,
     "thumbnail": "images/overcooked2.jpg"
   }

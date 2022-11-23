@@ -3,11 +3,15 @@ import FilterArea from "./components/FilterArea";
 import ItemArea from "./components/ItemArea";
 import CartArea from "./components/CartArea";
 import {Typography} from "@mui/material";
+import {useState} from "react";
 
 function App() {
-  return (
+
+    const [sortSelect, setSortSelect] = useState("Price, Ascending");
+
+    return (
     <div className="App">
-        <FilterArea/>
+        <FilterArea sortSelect={sortSelect} setSortSelect={setSortSelect}/>
         <div id="nonFilterArea">
             <div id="siteTitle">
                 <Typography variant="h3">Welcome to the Game Zone!</Typography>

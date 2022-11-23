@@ -10,7 +10,7 @@ function ItemArea (props) {
     return (
         <div id="item-area">
             {gameData.map((item, index) => (
-                <StoreItem
+                <StoreItem key={item.name}
                     name={item.name} description={item.description}
                     studio={item.studio} genre={item.genre}
                     platform={item.platform} price={item.price}

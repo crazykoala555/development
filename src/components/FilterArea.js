@@ -4,11 +4,10 @@ import {useState} from "react";
 
 function FilterArea (props) {
 
-    const [sortSelect, setSortSelect] = useState("Price, Ascending");
 
     function handleChange(event){
         console.log(event.target.value);
-        setSortSelect(event.target.value);
+        props.setSortSelect(event.target.value);
     }
 
     return (
@@ -19,7 +18,7 @@ function FilterArea (props) {
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={sortSelect}
+                    value={props.sortSelect}
                     label="Age"
                     onChange={handleChange}
                 >
