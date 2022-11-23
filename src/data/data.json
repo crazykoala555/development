@@ -52,5 +52,59 @@
     "platform" : ["XB", "PC"],
     "price": 59.99,
     "thumbnail": "images/haloinfinite.jpg"
+  },
+  {
+    "name": "Minecraft",
+    "description": "Open World Survival and Creative Game",
+    "studio" : "Mojang",
+    "genre" : "Open World",
+    "platform" : ["XB", "PC", "PS", "SW"],
+    "price": 24.99,
+    "thumbnail": "images/minecraft.jpg"
+  },
+  {
+    "name": "Terraria",
+    "description": "Open World Survival and Creative Game",
+    "studio" : "Re-Logic",
+    "genre" : "Open World",
+    "platform" : ["XB", "PC", "PS", "SW"],
+    "price": 24.99,
+    "thumbnail": "images/terraria.jpg"
+  },
+  {
+    "name": "Sackboy A Big Adventure",
+    "description": "Cutesy Level-Based Adventure Game",
+    "studio" : "Sumo Digital",
+    "genre" : "Co-Op",
+    "platform" : ["PC", "PS"],
+    "price": 59.99,
+    "thumbnail": "images/sackboy.jpg"
+  },
+  {
+    "name": "Beam.NG Drive",
+    "description": "Racing Soft Body Physics Simulator",
+    "studio" : "BeamNG",
+    "genre" : "Racing",
+    "platform" : ["PC"],
+    "price": 19.99,
+    "thumbnail": "images/beamng.jpg"
+  },
+  {
+    "name": "Overcooked",
+    "description": "Collaborative Cooking Game",
+    "studio" : "Team17",
+    "genre" : "Co-Op",
+    "platform" : ["XB", "PC", "PS", "SW"],
+    "price": 19.99,
+    "thumbnail": "images/overcooked.jpg"
+  },
+  {
+    "name": "Overcooked 2",
+    "description": "Collaborative Cooking Game, with more added fun!",
+    "studio" : "Team17",
+    "genre" : "Co-Op",
+    "platform" : ["XB", "PC", "PS", "SW"],
+    "price": 29.99,
+    "thumbnail": "images/overcooked2.jpg"
   }
 ]
