@@ -2,7 +2,6 @@ import gameData from "../data/data.json"
 import StoreItem from "./StoreItem";
 import "../styles/itemarea.css"
 import {useEffect, useState} from "react";
-import platformItem from "./PlatformItem";
 
 gameData.forEach((item) => {
     item.thumbnail = process.env.PUBLIC_URL + "/" + item.thumbnail;
@@ -121,7 +120,7 @@ function ItemArea (props) {
                     name={item.name} description={item.description}
                     studio={item.studio} genre={item.genre}
                     platform={item.platform} price={item.price}
-                    thumbnail={item.thumbnail}
+                    thumbnail={item.thumbnail} addToCart={() => props.addToCart(item)}
                 />
             ))}
         </div>

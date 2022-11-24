@@ -1,7 +1,6 @@
 import CardMedia from "@mui/material/CardMedia";
 import {Button, Card, CardActions, CardContent, Typography} from "@mui/material";
 import "../styles/itemarea.css"
-import gameData from "../data/data.json";
 import PlatformItem from "./PlatformItem";
 
 function StoreItem (props) {
@@ -42,7 +41,7 @@ function StoreItem (props) {
                     </div>
                 </CardContent>
                 <CardActions>
-                    <Button size="medium">Add to Cart</Button>
+                    <Button size="medium" onClick={props.addToCart}>Add to Cart</Button>
                 </CardActions>
             </Card>
         </div>

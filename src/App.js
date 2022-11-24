@@ -7,6 +7,8 @@ import {useState} from "react";
 
 function App() {
 
+    const [cart, setCart] = useState([]);
+
     const [sortSelect, setSortSelect] = useState("");
 
     const [genreSelect, setGenreSelect] = useState({
@@ -23,6 +25,12 @@ function App() {
         Switch: true
     });
 
+    function addToCart(item){
+        let name = item.name;
+        console.log(item.name);
+    }
+
+
     return (
     <div className="App">
         <FilterArea
@@ -30,16 +38,16 @@ function App() {
             genreSelect={genreSelect} setGenreSelect={setGenreSelect}
             platformSelect={platformSelect} setPlatformSelect={setPlatformSelect}
         />
-        <div id="nonFilterArea">
+        <CartArea cart={cart}/>
+        <div id="itemArea">
             <div id="siteTitle">
-                <Typography variant="h3">Welcome to the Game Zone!</Typography>
-                <Typography variant="h6">Feel free to add games to your cart :)</Typography>
+                <Typography variant="h3">The Game Zone</Typography>
             </div>
             <div id="content">
                 <ItemArea sortSelect={sortSelect} genreSelect={genreSelect}
                           setSortSelect={setSortSelect} platformSelect={platformSelect}
+                          cart={cart} setCart={setCart} addToCart={addToCart}
                 />
-                {/*<CartArea/>*/}
             </div>
         </div>
     </div>
