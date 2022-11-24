@@ -26,8 +26,50 @@ function App() {
     });
 
     function addToCart(item){
-        let name = item.name;
-        console.log(item.name);
+        let tempCart = [];
+        let alreadyExists = false;
+
+        for(let i = 0; i < cart.length; i++){
+            if(cart[i].game === item){
+                alreadyExists = true;
+                let newGameWithQuantity = {
+                    game : item,
+                    quantity: cart[i].quantity+1
+                }
+                tempCart.push(newGameWithQuantity);
+            } else {
+                tempCart.push(cart[i]);
+            }
+        }
+
+        if(!alreadyExists){
+            let newGameWithQuantity = {
+                game : item,
+                quantity: 1
+            }
+            tempCart.push(newGameWithQuantity);
+        }
+        setCart(tempCart);
+    }
+
+    function removeFromCart (item) {
+
+        let tempCart = [];
+
+        for(let i = 0; i < cart.length; i++){
+            if(cart[i].game === item && cart[i].quantity > 1){
+                let newGameWithQuantity = {
+                    game : item,
+                    quantity: cart[i].quantity-1
+                }
+                tempCart.push(newGameWithQuantity);
+            } else if (cart[i].quantity <= 1) {
+
+            } else {
+                tempCart.push(cart[i]);
+            }
+        }
+        setCart(tempCart);
     }
 
 
@@ -38,7 +80,7 @@ function App() {
             genreSelect={genreSelect} setGenreSelect={setGenreSelect}
             platformSelect={platformSelect} setPlatformSelect={setPlatformSelect}
         />
-        <CartArea cart={cart}/>
+        <CartArea cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>
         <div id="itemArea">
             <div id="siteTitle">
                 <Typography variant="h3">The Game Zone</Typography>

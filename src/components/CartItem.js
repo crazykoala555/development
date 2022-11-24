@@ -2,7 +2,6 @@ import {Button, ButtonGroup} from "@mui/material";
 
 function CartItem (props) {
 
-
     return(
         <div className="cartItem">
             <b className="cartItemTitle">{props.game.name}</b>
@@ -12,8 +11,8 @@ function CartItem (props) {
             Quantity: {props.quantity}
             <br/>
             <ButtonGroup variant="outlined" size="small" aria-label="small button group">
-                <Button>+</Button>
-                <Button>-</Button>
+                <Button onClick={props.addToCart}>+</Button>
+                <Button onClick={props.removeFromCart}>-</Button>
             </ButtonGroup>
         </div>
     )

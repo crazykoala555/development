@@ -7,7 +7,6 @@ gameData.forEach((item) => {
     item.thumbnail = process.env.PUBLIC_URL + "/" + item.thumbnail;
 });
 
-
 function ItemArea (props) {
 
     useEffect(() => {handleSort(false)}, [props.sortSelect])
