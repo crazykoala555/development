@@ -1,5 +1,6 @@
 import "../styles/filterarea.css"
 import {
+    Button,
     Checkbox,
     FormControl,
     FormControlLabel,
@@ -13,16 +14,42 @@ import {useState} from "react";
 
 function FilterArea (props) {
 
+    function handleReset () {
+        props.setSortSelect("");
+        props.setGenreSelect({
+            FirstPersonShooter: true,
+            Racing: true,
+            CoOp: true,
+            OpenWorld: true
+        })
+        props.setPlatformSelect({
+            Xbox: true,
+            PC: true,
+            PlayStation: true,
+            Switch: true
+        })
+    }
 
     function handleSortChange(event){
         props.setSortSelect(event.target.value);
-
     }
 
-    // function handleCheckChange(event) {
-    //     console.log(event.target.checked);
-    //     console.log(event.target.value)
-    // }
+    function handleGenreChange(event) {
+        props.setGenreSelect({
+            ...props.genreSelect,
+            [event.target.value]: event.target.checked,
+        });
+    }
+
+    function handlePlatformChange(event) {
+        props.setPlatformSelect({
+            ...props.platformSelect,
+            [event.target.value]: event.target.checked,
+        });
+    }
+
+    const { FirstPersonShooter, Racing, CoOp, OpenWorld } = props.genreSelect;
+    const { Xbox, PC, PlayStation, Switch } = props.platformSelect;
 
     return (
         <div id="filter-area">
@@ -41,21 +68,21 @@ function FilterArea (props) {
                     <MenuItem value={"Price, Descending"}>Price, Descending</MenuItem>
                 </Select>
             </FormControl>
-            {/*<Typography variant="h6">Filter by Genre</Typography>*/}
-            {/*<FormGroup onChange={handleCheckChange}>*/}
-            {/*    <FormControlLabel control={<Checkbox/>} checked={true} value="First-Person Shooter" label="First-Person Shooter" />*/}
-            {/*    <FormControlLabel control={<Checkbox/>} value="Racing" label="Racing" />*/}
-            {/*    <FormControlLabel control={<Checkbox/>} value="Co-Op" label="Co-Op" />*/}
-            {/*    <FormControlLabel control={<Checkbox/>} value="Open World" label="Open World" />*/}
-            {/*</FormGroup>*/}
-            {/*<Typography variant="h6">Filter by Platform</Typography>*/}
-            {/*<FormGroup>*/}
-            {/*    <FormControlLabel control={<Checkbox/>} value="Xbox" label="Xbox" />*/}
-            {/*    <FormControlLabel control={<Checkbox/>} value="PC" label="PC" />*/}
-            {/*    <FormControlLabel control={<Checkbox/>} value="PlayStation" label="PlayStation" />*/}
-            {/*    <FormControlLabel control={<Checkbox/>} value="Switch" label="Switch" />*/}
-            {/*</FormGroup>*/}
-
+            <Typography variant="h6">Filter by Genre</Typography>
+            <FormGroup >
+                <FormControlLabel control={<Checkbox onChange={handleGenreChange} checked={FirstPersonShooter} value="FirstPersonShooter"/>}   label="First-Person Shooter" />
+                <FormControlLabel control={<Checkbox onChange={handleGenreChange} checked={Racing} value="Racing"/>}  label="Racing" />
+                <FormControlLabel control={<Checkbox onChange={handleGenreChange} checked={CoOp} value="CoOp"/>} label="Co-Op" />
+                <FormControlLabel control={<Checkbox onChange={handleGenreChange} checked={OpenWorld} value="OpenWorld" />} label="Open World" />
+            </FormGroup>
+            <Typography variant="h6">Filter by Platform</Typography>
+            <FormGroup>
+                <FormControlLabel control={<Checkbox onChange={handlePlatformChange} checked={Xbox} value="Xbox"/>} label="Xbox" />
+                <FormControlLabel control={<Checkbox onChange={handlePlatformChange} checked={PC} value="PC"/>} label="PC" />
+                <FormControlLabel control={<Checkbox onChange={handlePlatformChange} checked={PlayStation} value="PlayStation"/>} label="PlayStation" />
+                <FormControlLabel control={<Checkbox onChange={handlePlatformChange} checked={Switch} value="Switch"/>} label="Switch" />
+            </FormGroup>
+            <Button variant="contained" onClick={handleReset}>Reset</Button>
         </div>
     )
 }
