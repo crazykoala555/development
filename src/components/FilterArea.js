@@ -1,6 +1,6 @@
 import "../styles/filterarea.css"
 import {
-    Button,
+    Button, ButtonGroup,
     Checkbox,
     FormControl,
     FormControlLabel,
@@ -14,20 +14,26 @@ import {useState} from "react";
 
 function FilterArea (props) {
 
-    function handleReset () {
-        props.setSortSelect("");
-        props.setGenreSelect({
-            FirstPersonShooter: true,
-            Racing: true,
-            CoOp: true,
-            OpenWorld: true
-        })
-        props.setPlatformSelect({
-            Xbox: true,
-            PC: true,
-            PlayStation: true,
-            Switch: true
-        })
+    function handleReset (sort, genre, platform) {
+        if(sort){
+            props.setSortSelect("");
+        }
+        if(genre){
+            props.setGenreSelect({
+                FirstPersonShooter: true,
+                Racing: true,
+                CoOp: true,
+                OpenWorld: true
+            })
+        }
+        if(platform){
+            props.setPlatformSelect({
+                Xbox: true,
+                PC: true,
+                PlayStation: true,
+                Switch: true
+            })
+        }
     }
 
     function handleSortChange(event){
@@ -82,7 +88,11 @@ function FilterArea (props) {
                 <FormControlLabel control={<Checkbox onChange={handlePlatformChange} checked={PlayStation} value="PlayStation"/>} label="PlayStation" />
                 <FormControlLabel control={<Checkbox onChange={handlePlatformChange} checked={Switch} value="Switch"/>} label="Switch" />
             </FormGroup>
-            <Button variant="contained" onClick={handleReset}>Reset</Button>
+            <ButtonGroup orientation="vertical" variant="outlined" size="medium" aria-label="small button group">
+                <Button className="config" variant="outlined" onClick={() => handleReset(false, true, false)}>All Genres</Button>
+                <Button className="config" variant="outlined" onClick={() => handleReset(false, false, true)}>All Platforms</Button>
+                <Button className="config" variant="outlined" onClick={() => handleReset(false, true, true)}>Show All</Button>
+            </ButtonGroup>
         </div>
     )
 }
